@@ -16,12 +16,12 @@ namespace university_binary_tree
 
 
             Position jefeRegPosition = new Position("jefe reg", 640, 0.17F);
-            Position asist2Position = new Position("Asistente 2", 170, 0.7F);
-            Position secTreg2Position = new Position("secretaria Treg 1", 360, 0.5F);            
-            Position secTreg1Position = new Position("secretaria Treg 2", 400, 0.6F);
-            Position mensajeroPosition = new Position("Mensajero", 90, 0.1F);
+            Position asist2Position = new Position("Asistente 2", 170, 0.07F);
+            Position secTreg2Position = new Position("secretaria Treg 2", 360, 0.05F);            
+            Position secTreg1Position = new Position("secretaria Treg 1", 400, 0.06F);
+            Position mensajeroPosition = new Position("Mensajero", 90, 0.01F);
             Position asist1Position = new Position("Asistente 1", 250, 0.12F);
-            Position alumno1Position = new Position("Alumno", 20, 0.001F);
+           // Position alumno1Position = new Position("Alumno", 2000000, 0.001F);
 
 
 
@@ -44,7 +44,7 @@ namespace university_binary_tree
             universityTree.CreatePosition(universityTree.Root, asist2Position, secTreg1Position.Name);
             universityTree.CreatePosition(universityTree.Root, mensajeroPosition, asist2Position.Name);
             universityTree.CreatePosition(universityTree.Root, asist1Position, secTreg1Position.Name);
-          //  universityTree.CreatePosition(universityTree.Root, alumno1Position, asist1Position.Name);
+           // universityTree.CreatePosition(universityTree.Root, alumno1Position, asist1Position.Name);
 
 
 
@@ -66,7 +66,9 @@ namespace university_binary_tree
             PositionNode NodeFound = new PositionNode();
             NodeFound = universityTree.FindNode(universityTree.Root, "Vicerector academico");  //Position given to research the salary 
             Console.WriteLine($"salary to position given is : {universityTree.AddSalaries(NodeFound) }");
-          
+
+            Console.WriteLine($"salary to position given is(only) : {universityTree.SalaryGiven(universityTree.Root, "contador") }");
+
             Console.WriteLine("------------------------------------------------------------------------");
             Console.WriteLine($"Total Tax is : {universityTree.CalculateSumTax(universityTree.Root)}");
             Console.WriteLine("------------------------------------------------------------------------");

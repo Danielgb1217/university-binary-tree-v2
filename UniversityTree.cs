@@ -89,11 +89,12 @@ namespace university_binary_tree
                 longestSalary = from.Position.Salary;
                 temp = from;
             }            
-             CalculateLongestSalary(from.Right);
-             CalculateLongestSalary(from.Left);
+             
+            CalculateLongestSalary(from.Left);
+            CalculateLongestSalary(from.Right);
         }
 
-        /*
+        
         public float SalaryGiven(PositionNode from, string position)
         {
             if (from == null) return salaryGiven;
@@ -106,7 +107,7 @@ namespace university_binary_tree
             SalaryGiven(from.Left, position);
             return salaryGiven;
         }
-        */
+        
 
         public PositionNode FindNode(PositionNode from, string Name)
         {
